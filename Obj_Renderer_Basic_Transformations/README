@@ -1,0 +1,59 @@
+CSC4029Z Assignment 1
+GTTDAN002
+=====================
+
+Usage Instructions:
+==================
+The program was written and tested on Linux.
+
+Ensure that the `libsdl2-dev` and `libglew-dev` packages are installed.
+
+A makefile is provided. Run the command "make" to compile the program, and "make run" to run the program.
+
+When run, a window should appear with a 3D object rendered at the origin. Transformations can be applied to the
+object by means of key-presses. The possible key-presses are listed below.
+
+C:   
+        changes the colour of the object (cycles through a list of colours: white, yellow, red, green, blue,   turquoise, purple,)  
+
+T:
+        sets the transformation mode to "translation".  -----> will be printed to the output console
+
+R:
+        sets the transformation mode to "rotation".     -----> will be printed to the output console
+
+S:
+        sets the transformation mode to "scaling".      -----> will be printed to the output console
+
+X:
+        sets the transformation axis to the x-axis.     -----> will be printed to the output console
+
+Y:
+        sets the transformation axis to the y-axis.     -----> will be printed to the output console
+
+Z:
+        sets the transformation axis to the z-axis.     -----> will be printed to the output console
+
++:
+        applies the current transformation to the object about the current axis in the postive direction
+        OR scales up (if in scaling mode).
+
+-:
+        applies the current transformation to the object about the current axis in the negative direction
+        OR scales down (if in scaling mode).
+
+BACKSPACE:
+        resets the object to its initial position, orientation and scale (undoes all transformations).
+
+
+Defaults:
+==================
+Transformation Mode: scaling
+Axis: x-axis
+
+References:
+==================
+The provided C++ framework code is used to load the obect and render it to the window.
+Additional code to handle key presses and perform transfomations was inspired by content and additional code 
+provided in the CSC4029Z lectures.
+The website http://www.opengl-tutorial.org/, was used to provide some inspiration for the specific transformations (such as the glm functionality).
